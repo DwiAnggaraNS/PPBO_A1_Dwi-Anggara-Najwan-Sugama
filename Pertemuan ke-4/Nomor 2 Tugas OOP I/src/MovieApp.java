@@ -53,6 +53,7 @@ public class MovieApp {
             System.out.println("Pesanan berhasil, dengan detail pesanan:");
             System.out.println("Film: "+film.title);
             System.out.println("Jumlah tiket: "+jumlah_tiket);
+            System.out.println("Meode pembayaran : "+booking.payment);
             System.out.println("Booking id: "+randomId+"\n");
         }
         else{
@@ -68,7 +69,7 @@ public class MovieApp {
                 checker = true;
                 System.out.println("Pesanan ditemukan, berikut detail pesanannya:");
                 System.out.println("Film: "+booking.film.title);
-                System.out.println("Pembayaran menggunakan : "+booking.payment);
+                System.out.println("Meode pembayaran : "+booking.payment);
                 System.out.println("Jumlah tiket: "+booking.jumlah_tiket);
                 System.out.println("Booking id: "+booking.booking_id+"\n");
             }
