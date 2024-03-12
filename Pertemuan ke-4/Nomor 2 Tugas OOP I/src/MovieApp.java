@@ -44,13 +44,12 @@ public class MovieApp {
 
 //  Method untuk booking film
     void bookFilm(Film film, int jumlah_tiket, String payment){
-        UUID uuid = UUID.randomUUID();
-        String randomId = uuid.toString();
-
-        Booking booking = new Booking(randomId, film, jumlah_tiket, payment);
-        listBooking.add(booking);
-
+        
         if (jumlah_tiket <= film.avaibleSeats){
+            UUID uuid = UUID.randomUUID();
+            String randomId = uuid.toString();
+            Booking booking = new Booking(randomId, film, jumlah_tiket, payment);
+            listBooking.add(booking);
             System.out.println("Pesanan berhasil, dengan detail pesanan:");
             System.out.println("Film: "+film.title);
             System.out.println("Jumlah tiket: "+jumlah_tiket);
